@@ -10,10 +10,10 @@
   "author": "Silas Landricombe <si@siland.co.uk>",
   "repository" : {
     "type" : "git",
-    "url" : "http://github.com/silasl/"
+    "url" : "http://github.com/silasl/componentpath-react-mixin"
   },
   "bugs": {
-    "url" : "http://github.com/silasl/issues"
+    "url" : "http://github.com/silasl/componentpath-react-mixin/issues"
   },
   "license": "MIT",
   "devDependencies": {
