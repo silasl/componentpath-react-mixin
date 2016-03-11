@@ -2,7 +2,7 @@ jest.autoMockOff();
 
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    ReactElement = require('../example/ReactElement.jsx'),
+    ReactElement = require('../example/subdir/ReactElement.jsx'),
     TestUtils = require('react-addons-test-utils');
 
 var reactElement = TestUtils.renderIntoDocument(
@@ -10,7 +10,8 @@ var reactElement = TestUtils.renderIntoDocument(
 );
 
 describe('componentpath-react-mixin', function() {
-    var el;
+    var el,
+        dir = __dirname.replace('__tests__', '');
 
     beforeEach(function () {
         el = TestUtils.scryRenderedDOMComponentsWithTag(
@@ -29,7 +30,14 @@ describe('componentpath-react-mixin', function() {
 
     describe('the data-component-path attribute', function() {
         it('should contain the file path to the component source file', function () {
-            expect(ReactDOM.findDOMNode(reactElement).getAttribute('data-component-path')).toBe('./ReactComponent');
+            expect(ReactDOM.findDOMNode(reactElement).getAttribute('data-component-path')).toBe(dir + 'example/subdir/ReactComponent');
+        });
+
+        it('should contain the suffixed file path to the component source file if the suffix prop is present', function () {
+            reactElement = TestUtils.renderIntoDocument(
+                <ReactElement componentContext="suffix" />
+            );
+            expect(ReactDOM.findDOMNode(reactElement).getAttribute('data-component-path')).toBe(dir + 'example/subdir/ReactComponent-suffix');
         });
     });
 });
