@@ -1,6 +1,6 @@
 {
   "name": "componentpath-react-mixin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React mixin to add data attribute to component element containing path to source file.",
   "main": "index.js",
   "scripts": {
