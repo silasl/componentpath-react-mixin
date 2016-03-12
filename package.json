@@ -1,6 +1,6 @@
 {
   "name": "componentpath-react-mixin",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "React mixin to add data attribute to component element containing path to source file.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "Silas Landricombe <si@siland.co.uk>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/silasl/componentpath-react-mixin"
+    "url": "git+ssh://git@github.com/silasl/componentpath-react-mixin.git"
   },
   "bugs": {
     "url": "http://github.com/silasl/componentpath-react-mixin/issues"
@@ -37,5 +37,10 @@
       "/node_modules/",
       "<rootDir>/node_modules/"
     ]
-  }
+  },
+  "homepage": "https://github.com/silasl/componentpath-react-mixin#readme",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {}
 }
